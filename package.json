@@ -1,10 +1,10 @@
 {
-    "name": "slush-slush-mail-generator",
+    "name": "slush-mail-generator",
     "description": "An automated email compile environment generator based on SlushJS.",
     "version": "0.0.1",
-    "homepage": "https://github.com/sbarchetta/slush-slush-mail-generator",
+    "homepage": "https://github.com/sbarchetta/mail-generator",
     "author": {
-        "name": "Santiago Barchetta <dudesl@gmail.com>",
+        "name": "Santiago Barchetta",
         "email": "dudesl@gmail.com"
     },
     "repository": {
