@@ -63,10 +63,6 @@ gulp.task('default', function (done) {
         message: 'What is the version of your mail?',
         default: '0.1.0'
     }, {
-        name: 'repositoryURL',
-        message: 'What is the author name?',
-        default: defaults.repositoryURL
-    }, {
         name: 'authorName',
         message: 'What is the author name?',
         default: defaults.authorName
@@ -78,6 +74,10 @@ gulp.task('default', function (done) {
         name: 'userName',
         message: 'What is the github username?',
         default: defaults.userName
+    }, {
+        name: 'repositoryURL',
+        message: 'What is the author name?',
+        default: ""
     }, {
         type: 'confirm',
         name: 'moveon',
