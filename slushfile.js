@@ -43,7 +43,7 @@ var defaults = (function () {
     }
 
     return {
-        appName: workingDirName,
+        mailName: workingDirName,
         userName: osUserName || format(user.name || ''),
         authorName: user.name || '',
         authorEmail: user.email || ''
@@ -52,16 +52,20 @@ var defaults = (function () {
 
 gulp.task('default', function (done) {
     var prompts = [{
-        name: 'appName',
-        message: 'What is the name of your project?',
-        default: defaults.appName
+        name: 'mailName',
+        message: 'What is the name of your email?',
+        default: defaults.mailName
     }, {
-        name: 'appDescription',
-        message: 'What is the description?'
+        name: 'mailDescription',
+        message: 'What is your email? For what it is?'
     }, {
-        name: 'appVersion',
-        message: 'What is the version of your project?',
+        name: 'mailVersion',
+        message: 'What is the version of your mail?',
         default: '0.1.0'
+    }, {
+        name: 'repositoryURL',
+        message: 'What is the author name?',
+        default: defaults.repositoryURL
     }, {
         name: 'authorName',
         message: 'What is the author name?',
@@ -85,7 +89,7 @@ gulp.task('default', function (done) {
             if (!answers.moveon) {
                 return done();
             }
-            answers.appNameSlug = _.slugify(answers.appName);
+            answers.appNameSlug = _.slugify(answers.mailName);
             gulp.src(__dirname + '/templates/**')
                 .pipe(template(answers))
                 .pipe(rename(function (file) {
